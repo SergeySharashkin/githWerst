@@ -1,0 +1,144 @@
+.team {
+  background-color: $button-bgr-color;
+  @extend %section-padding;
+  @extend %auto-margin;
+  
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.team__container {
+  max-width: 480px;
+  width: 100%;
+  @extend %auto-margin;
+  @extend %contain-padding;
+  
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+.team__tittle {
+  font-weight: bold;
+  
+  font-size: 28px;
+  line-height: 1.17;
+
+  margin-bottom: 50px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+}
+.team__list {
+  // display: flex;
+ 
+  @extend %list;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.team__form {
+    width: 100%;
+    text-align: center;
+
+  border: 1px solid $hero-text-color;
+  border-radius: 0 0 4px 4px;
+  background-color: $hero-text-color;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+
+  @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px)/2);
+      margin: 15px;
+    }
+  @media screen and (min-width: 1200px) {
+      width: calc((100% - 4 * 30px)/4);
+      margin: 15px;
+    }
+  &:not(:last-child) {
+    
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  
+  
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+.team-card__occupation {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-top: 10px;
+  color: $tittle-text-color;
+  
+}
+.team__image {
+  // max-width: 270px;
+  width: 100%;
+  height: auto;
+ 
+  
+}
+.team-card__member {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  
+}
+.social-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.social-list__item {
+  @extend %list;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.social-list__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $icon-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $hero-text-color;
+    background-color: $accent-color;
+  }
+}
+.social-list__icon {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  fill: inherit;
+  justify-content: center;
+  align-items: center;
+}
