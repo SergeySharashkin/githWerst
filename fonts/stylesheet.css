@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('AllianceNo1-Light.eot');
+    src: local('Alliance No.1 Light'), local('AllianceNo.1-Light'),
+        url('AllianceNo1-Light.eot?#iefix') format('embedded-opentype'),
+        url('AllianceNo1-Light.woff2') format('woff2'),
+        url('AllianceNo1-Light.woff') format('woff'),
+        url('AllianceNo1-Light.ttf') format('truetype'),
+        url('AllianceNo1-Light.svg#AllianceNo.1-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

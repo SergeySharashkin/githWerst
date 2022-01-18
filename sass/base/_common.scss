@@ -9,7 +9,7 @@ html {
   }
   
   body {
-    color: $primary-text-color;
+    color: $prim-black;
     font-family: $prim-font;
     letter-spacing: 0.03em;
   }
@@ -38,4 +38,16 @@ html {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
+  }
+  button {
+    cursor: pointer;
+    transition: 400ms;
+  }
+  a {
+    text-decoration: none;
+    width: max-content;
+    margin: 0 auto;
+    font-family: $prim-font;
+    cursor: pointer;
+    transition: 400ms;
   }
