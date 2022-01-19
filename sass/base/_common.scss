@@ -11,7 +11,7 @@ html {
   body {
     color: $prim-black;
     font-family: $prim-font;
-    letter-spacing: 0.03em;
+    letter-spacing: -0.03em;
   }
   h1,
   h2,
@@ -28,7 +28,11 @@ html {
     max-width: 100%;
     height: auto;
   }
-
+li {
+  list-style: none;
+    padding: 0;
+    margin: 0;
+}
   .visually-hidden {
     position: absolute;
     width: 1px;
