@@ -74,13 +74,12 @@ a {
   padding-right: 15px;
 }
 
-.page-header, .page-header__container, .page-header__title, .page-header__text, .illustration, .illustr {
+.page-header, .page-header__container, .page-header__title, .page-header__text, .illustration, .illustr, .description, .description__container, .description__list-contain {
   margin-right: auto;
   margin-left: auto;
 }
 
 .page-header {
-  border-bottom: 1px solid #ececec;
   background-image: url("../images/headbbgimg.png");
   background-size: cover;
   height: 707px;
@@ -100,7 +99,11 @@ a {
 }
 
 .logo__icon {
-  fill: #ececec;
+  padding: 0;
+  margin: 0;
+  min-width: 45px;
+  height: 45px;
+  z-index: 5;
 }
 
 .page-header__title {

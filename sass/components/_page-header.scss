@@ -1,13 +1,10 @@
 .page-header {
   @extend %auto-margin;
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
-  // position: relative;
   background-image: url("../images/headbbgimg.png");
   background-size: cover;
   height: 707px;
   background-position: center;
-  //   width: 3840px;
-  //   min-height: 707px;
+  
 }
 .page-header__container {
   @extend %contain-padding;
@@ -23,7 +20,13 @@
   
 }
 .logo__icon {
-  fill: rgba(236, 236, 236, 1);
+    padding: 0;
+    margin: 0;
+//   fill: rgba(236, 236, 236, 1);
+//   display: inline-block;
+  width: 45px;
+  height: 45px;
+//   z-index: 5;
 }
 .page-header__title {
     @extend %auto-margin; 
