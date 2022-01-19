@@ -9,21 +9,24 @@
 .page-header__container {
   @extend %contain-padding;
   @extend %auto-margin;
+  padding-top: 34px;
   max-width: 1920px;
 }
 .logo {
   color: $sec-white;
     font-weight: 800;
-    font-style: normal;
+    // font-style: normal;
   font-size: 30px;
   line-height: 0.8;
+  padding: 0;
+  margin: 0;
   
 }
 .logo__icon {
     padding: 0;
     margin: 0;
-//   fill: rgba(236, 236, 236, 1);
-//   display: inline-block;
+
+  display: inline-block;
   width: 45px;
   height: 45px;
 //   z-index: 5;
@@ -35,7 +38,7 @@
   font-weight: 800;
   font-style: normal;
   font-size: 96px;
-  line-height: 100%;
+  line-height: 1;
   text-align: center;
   max-width: 1600px;
 }
