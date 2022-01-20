@@ -4,6 +4,7 @@
     @extend %auto-margin;
     // width: 1200px;
     margin-top: -150px;
+    padding-bottom: 49px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,13 +13,14 @@
 .illustr {
         position: relative;
         z-index: 2;
-        max-width: 888px;
+        max-width: 948px;
         width: 100%;
         @extend %auto-margin;
+       
     
     }
  .pleyer_img {
-    max-width: 888px;
+    max-width: 948px;
     width: 100%;
     height: auto;
     padding: 0;
