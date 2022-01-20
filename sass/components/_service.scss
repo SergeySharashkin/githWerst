@@ -34,10 +34,11 @@ z-index: -1;
 }
 .service__content {
     display: flex;
+    margin-top: 49px;
     
 }
 .service__list {
-    
+    margin: 0;
 }
 .service__item {
     font-style: normal;
@@ -61,18 +62,20 @@ color: $prim-black;
     height: 0px;
     margin: 0;
     overflow: hidden;
+    display: none;
     &__active{
         display: flex;
         width: 100%;
         height: auto;
         flex-wrap: wrap;
+        // margin-top: 20px;
         // margin: -129px;
     } 
 
 }
 .service__content__item {
     width: calc((100% - 129px)/2);
-    margin: 0 129px 50px 0;
+    margin-right: 129px;
     z-index: 1;
     &:nth-child(2n) {
         margin: 0;
