@@ -20,9 +20,14 @@
           </svg>
           TrustPix
         </a>
+
         <h1 class="page-header__title">
-          One website. One monthly cost. The whole nine yards
+          One website. One monthly cost.<br />
+          <span class="word1"> The whole nine yards </span>
+          <span class="word1"> Always close by</span>
+          <span class="word1"> Smart, efficient and clean</span>
         </h1>
+
         <p class="page-header__text">
           Pay one monthly amount to have the website you desire, 24/7 support
           plus everything you need for marketing as long as you need. No
@@ -366,11 +371,16 @@
       <section class="competitors">
         <div class="competitors__container">
           <div class="competitors__baner">
-            <h2 class="competitors_title">Don't let your competitors get a greater power </h2>
-            <p class="competitors__text">Web development and digital marketing
-              is now readily available for your business with <span>TrustPix</span>.
-              On a turnkey basis. Easier than ever.</p>
+            <h2 class="competitors_title">
+              Don't let your competitors get a greater power
+            </h2>
+            <p class="competitors__text">
+              Web development and digital marketing is now readily available for
+              your business with <span>TrustPix</span>. On a turnkey basis.
+              Easier than ever.
+            </p>
             <button class="competitors__btn">Explore Benefits</button>
+            <div class="banner__overlay"></div>
           </div>
         </div>
       </section>
@@ -392,51 +402,8 @@
       <div class="videoWithYoutube"></div>
       <p onclick="closeVideo()">&#10005;</p>
     </div>
-    <script>
-      const ulServ = document.querySelector(".service__list");
-
-      let curentItem = ulServ.addEventListener("click", (e) => {
-        let currentLi = document.querySelector(".service__item__current");
-        let currentUL = document.querySelector(
-          ".service__content__list__active"
-        );
-        let clickedId = e.target.id;
-        let activatedEl = document.querySelector(`#${clickedId}`);
-        let activatedUL = document.querySelector(`#${clickedId}List`);
-        currentLi.classList.remove("service__item__current");
-        currentUL.classList.remove("service__content__list__active");
-        activatedEl.classList.add("service__item__current");
-        activatedUL.classList.add("service__content__list__active");
-        return console.log(activatedUL);
-      });
-    </script>
-    <script>
-      const openVideo = () => {
-        document.querySelector(".videoYoutube").style.display = " block";
-        setTimeout(() => {
-          document.querySelector(".videoYoutube .fon").style.opacity = "1";
-          document.querySelector(
-            ".videoYoutube .videoWithYoutube"
-          ).style.opacity = "1";
-          document.querySelector(".videoYoutube p").style.opacity = "1";
-          document.querySelector(
-            ".videoYoutube .videoWithYoutube"
-          ).innerHTML = `<iframe src="https://player.vimeo.com/video/553796055?autoplay=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" autoplay=1 width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="PageSpeed.mp4"></iframe>`;
-        }, 100);
-      };
-      const closeVideo = () => {
-        document.querySelector(".videoYoutube").style.display = "none";
-        setTimeout(() => {
-          document.querySelector(".videoYoutube .fon").style.opacity = "0";
-          document.querySelector(
-            ".videoYoutube .videoWithYoutube"
-          ).style.opacity = "0";
-          document.querySelector(".videoYoutube p").style.opacity = "0";
-          document.querySelector(
-            ".videoYoutube .videoWithYoutube"
-          ).innerHTML = ``;
-        }, 100);
-      };
-    </script>
+    <script src="./js/mainText.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/openVideo.js"></script>
   </body>
 </html>

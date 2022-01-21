@@ -1,14 +1,16 @@
-(() => {
-    const refs = {
-      openModalBtn: document.querySelector('[data-modal-open]'),
-      closeModalBtn: document.querySelector('[data-modal-close]'),
-      modal: document.querySelector('[data-modal]'),
-    };
-  
-    refs.openModalBtn.addEventListener('click', toggleModal);
-    refs.closeModalBtn.addEventListener('click', toggleModal);
-  
-    function toggleModal() {
-      refs.modal.classList.toggle('backdrop--is-hidden');
-    }
-  })();
+const ulServ = document.querySelector(".service__list");
+
+let curentItem = ulServ.addEventListener("click", (e) => {
+  let currentLi = document.querySelector(".service__item__current");
+  let currentUL = document.querySelector(
+    ".service__content__list__active"
+  );
+  let clickedId = e.target.id;
+  let activatedEl = document.querySelector(`#${clickedId}`);
+  let activatedUL = document.querySelector(`#${clickedId}List`);
+  currentLi.classList.remove("service__item__current");
+  currentUL.classList.remove("service__content__list__active");
+  activatedEl.classList.add("service__item__current");
+  activatedUL.classList.add("service__content__list__active");
+  return console.log(activatedUL);
+});

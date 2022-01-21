@@ -1,0 +1,39 @@
+
+ .word1 {
+    position: absolute;
+    width: max-content;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // text-align: center;
+}
+ .letter {
+    // color: #B1D4F8;
+    // height: fit-content;
+    // font-family: "BwModelica-Black";
+    display: inline-block;
+    position: relative;
+    // float: left;
+    white-space: pre-wrap;
+    transform-origin: 50% 50% 0px;
+}
+ .letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.17s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.20s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.try {
+    line-height: 1.5;
+    margin-top: 4.3vw;
+    font-family: "Raleway-Regular";
+    font-size: 1.3vw;
+    line-height: 1.5
+}

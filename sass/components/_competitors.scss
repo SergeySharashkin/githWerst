@@ -1,62 +1,125 @@
 .competitors {
-    margin: 0 auto;
-    padding-top: 47px;
-    padding-bottom: 250px;
+  margin: 0 auto;
+  padding-top: 247px;
+  padding-bottom: 250px;
 }
 .competitors__container {
-    position: relative;
-    margin: 0 auto;
-    // &::before {
-    //     content: '';
-    //     background-image: url('../images/Polygon.png');
-    //     width: 100px;
-    //     height: 100px;
-    //     position: absolute;
-    // }
+  position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
+  &::before {
+    content: "";
+    background-image: url("../images/Polygon.png");
+    width: 893px;
+    height: 893px;
+    position: absolute;
+    z-index: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -10%;
+    top: -25%;
+  }
+  &::after {
+    content: "";
+    background-image: url("../images/bg-ball1.png");
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: -5%;
+    bottom: -15%;
+  }
 }
 .competitors__baner {
-    // width: 100%;
-    max-width: 1480px;
-    height: 624px;
-    margin: 0 auto;
-    background: content-box url('../images/baner.png');
-    background-size: cover;
-//    background-position:top;
+  // width: 100%;
+  max-width: 1480px;
+  height: 624px;
+  margin: 0 auto;
+  background: content-box url("../images/baner.png");
+  background-size: cover;
+  z-index: 10;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // position: relative;
+  //    background-position:top;
 
-    // box-shadow: 0px 55px 100px rgba(0, 0, 0, 0.25);
-    filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
-border-radius: 11px;
-// transform: rotate(-180deg);
+  // box-shadow: 0px 55px 100px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
+  border-radius: 11px;
+  &:hover .banner__overlay {
+    opacity: 0.8;
+    z-index: -5;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  // transform: rotate(-180deg);
+}
+.banner__overlay {
+  position: fixed;
+  left: -80%;
+  top: -250%;
+  // bottom: 0;
+  width: 200vw;
+  height: 200vh;
+  background-color: #5738c7c4;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .competitors_title {
-    padding-top: 100px;
-    font-style:700;
-font-weight: 900;
-font-size: 48px;
-line-height: 110%;
-/* identical to box height, or 53px */
+  padding-top: 100px;
+  font-style: 700;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 110%;
+  /* identical to box height, or 53px */
 
-text-align: center;
-letter-spacing: 0.01em;
+  text-align: center;
+  letter-spacing: 0.01em;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
 .competitors__text {
-    font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 110%;
-margin: 34px auto 35px auto;
-/* or 40px */
-max-width:800px;
-text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 110%;
+  margin: 34px auto 35px auto;
+  /* or 40px */
+  max-width: 800px;
+  text-align: center;
 
-color: #FFFFFF;
-&>span {
-    font-weight: 700;  
-}
+  color: #ffffff;
+  & > span {
+    font-weight: 700;
+  }
 }
 .competitors__btn {
-    margin: 0 auto;
-    display: inline-block;
+  margin: 0 auto;
+  display: flex;
+  width: 226px;
+
+  height: 63px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 34.5px;
+  background: none;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 2px solid #ffffff;
+  &:hover,
+  &:focus {
+    background-color: aquamarine;
+    color: black;
+  }
 }
