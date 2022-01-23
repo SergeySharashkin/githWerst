@@ -1,39 +1,51 @@
+//  body {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background: #222;
+//   }
 
- .word1 {
-    position: absolute;
-    width: max-content;
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    // text-align: center;
-}
- .letter {
-    // color: #B1D4F8;
-    // height: fit-content;
-    // font-family: "BwModelica-Black";
-    display: inline-block;
+  .rotating-text p {
     position: relative;
-    // float: left;
-    white-space: pre-wrap;
-    transform-origin: 50% 50% 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+//   .rotating-text p {
+//     display: inline-flex;
+//     margin: 0;
+//     vertical-align: top;
+//   }
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  color: $prim-white;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 96px;
+  line-height: 1;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  //   justify-content: center;
+  //   align-items: center;
+  @media screen and (max-width: 1500px) {
+    font-size: 72px;
+  }
 }
- .letter.out {
-    transform: rotateX(90deg);
-    transition: transform 0.17s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+// .rotating-text p .word .letter {
+//   // transform-origin: center center 25px;
+// }
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-
-.letter.behind {
-    transform: rotateX(-90deg);
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
 }
-.letter.in {
-    transform: rotateX(0deg);
-    transition: transform 0.20s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.try {
-    line-height: 1.5;
-    margin-top: 4.3vw;
-    font-family: "Raleway-Regular";
-    font-size: 1.3vw;
-    line-height: 1.5
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
 }

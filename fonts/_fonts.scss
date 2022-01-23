@@ -1,19 +1,196 @@
 @font-face {
     font-family: 'Alliance No.1';
     src: url('../fonts/AllianceNo1-Light.eot');
-    src: local('Alliance No.1 Light'), local('AllianceNo.1-Light'),
+    src: local('AllianceNo.1-Light'),
         url('../fonts/AllianceNo1-Light.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AllianceNo1-Light.woff2') format('woff2'),
         url('../fonts/AllianceNo1-Light.woff') format('woff'),
-        url('../fonts/AllianceNo1-Light.ttf') format('truetype'),
-        url('../fonts/AllianceNo1-Light.svg#AllianceNo.1-Light') format('svg');
+        url('../fonts/AllianceNo1-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "BwModelica-Black";
-    src: url("../fonts/BwModelica-Black.otf");
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-Black.eot');
+    src: local('AllianceNo.1-Black'),
+        url('../fonts/AllianceNo1-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-Black.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-Black.woff') format('woff'),
+        url('../fonts/AllianceNo1-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-ExtraBoldItalic.eot');
+    src: local('AllianceNo.1-ExtraBoldItalic'),
+        url('../fonts/AllianceNo1-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-BlackItalic.eot');
+    src: local('AllianceNo.1-BlackItalic'),
+        url('../fonts/AllianceNo1-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-BlackItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-BlackItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-BoldItalic.eot');
+    src: local('AllianceNo.1-BoldItalic'),
+        url('../fonts/AllianceNo1-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-BoldItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-BoldItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-Bold.eot');
+    src: local('AllianceNo.1-Bold'),
+        url('../fonts/AllianceNo1-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-Bold.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-Bold.woff') format('woff'),
+        url('../fonts/AllianceNo1-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-ExtraBold.eot');
+    src: local('AllianceNo.1-ExtraBold'),
+        url('../fonts/AllianceNo1-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-ExtraBold.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-ExtraBold.woff') format('woff'),
+        url('../fonts/AllianceNo1-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('../fonts/AllianceNo2-Light.eot');
+    src: local('AllianceNo.2-Light'),
+        url('../fonts/AllianceNo2-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo2-Light.woff2') format('woff2'),
+        url('../fonts/AllianceNo2-Light.woff') format('woff'),
+        url('../fonts/AllianceNo2-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-RegularItalic.eot');
+    src: local('AllianceNo.1-RegularItalic'),
+        url('../fonts/AllianceNo1-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-RegularItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-RegularItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-LightItalic.eot');
+    src: local('AllianceNo.1-LightItalic'),
+        url('../fonts/AllianceNo1-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-LightItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-LightItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-SemiBold.eot');
+    src: local('AllianceNo.1-SemiBold'),
+        url('../fonts/AllianceNo1-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-SemiBold.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-SemiBold.woff') format('woff'),
+        url('../fonts/AllianceNo1-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-Regular.eot');
+    src: local('AllianceNo.1-Regular'),
+        url('../fonts/AllianceNo1-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-Regular.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-Regular.woff') format('woff'),
+        url('../fonts/AllianceNo1-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-SemiBoldItalic.eot');
+    src: local('AllianceNo.1-SemiBoldItalic'),
+        url('../fonts/AllianceNo1-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-Medium.eot');
+    src: local('AllianceNo.1-Medium'),
+        url('../fonts/AllianceNo1-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-Medium.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-Medium.woff') format('woff'),
+        url('../fonts/AllianceNo1-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.1';
+    src: url('../fonts/AllianceNo1-MediumItalic.eot');
+    src: local('AllianceNo.1-MediumItalic'),
+        url('../fonts/AllianceNo1-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AllianceNo1-MediumItalic.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-MediumItalic.woff') format('woff'),
+        url('../fonts/AllianceNo1-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
 

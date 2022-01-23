@@ -2,20 +2,25 @@
   @extend %auto-margin;
   padding-top: 247px;
   padding-bottom: 250px;
+  position: relative;
+  
+  &:hover .banner__overlay {
+    opacity: 0.8;
+    z-index: -5;
+  }
+  &:hover .competitors__container {
+    transform: scale(1.1);
+  }
 }
 .competitors__container {
+  padding-left: 15px;
+  padding-right: 15px;
   @extend %auto-margin;
   position: relative;
   max-width: 1500px;
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-&:hover .banner__overlay {
-    opacity: 0.8;
-    z-index: -5;
-  }
-&:hover ,
-&:focus  {
-    transform: scale(1.1);
-  }
+  
+  
   &::before {
     content: "";
     background-image: url("../images/Polygon.png");
@@ -51,26 +56,16 @@
   background: content-box url("../images/baner.png");
   background-size: cover;
   z-index: 10;
-  
-  // position: relative;
-  //    background-position:top;
 
-  // box-shadow: 0px 55px 100px rgba(0, 0, 0, 0.25);
   filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
   border-radius: 11px;
-  
-  
-
-  
-  // transform: rotate(-180deg);
 }
 .banner__overlay {
   position: fixed;
-  left: -80%;
-  top: -250%;
-  // bottom: 0;
+  left: 0;
+  top: 0;
   width: 200vw;
-  height: 200vh;
+  height: 200vw;
   background-color: #5738c7c4;
   z-index: -1;
   opacity: 0;
@@ -89,7 +84,6 @@
   letter-spacing: 0.01em;
 
   color: #ffffff;
- 
 }
 .competitors__text {
   font-style: normal;

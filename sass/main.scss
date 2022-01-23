@@ -1,10 +1,11 @@
-@import '../sass/components/animaltext';
 @import '../fonts/fonts';
 @import '../sass/utils/variables';
 @import '../sass/base/common';
 @import '../sass/utils/placeholders';
 @import '../sass/utils/breakpoints';
 @import '../sass/components/page-header';
+@import '../sass/components/animaltext';
+
 @import '../sass/components/player';
 @import '../sass/components/description';
 
@@ -19,7 +20,7 @@
 // @import '../sass/components/occupation';
 // @import '../sass/components/team';
 // @import '../sass/components/client';
-// @import '../sass/components/footer';
+@import '../sass/components/footer';
 
 // @import '../sass/components/portfolio';
 
