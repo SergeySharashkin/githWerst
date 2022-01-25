@@ -1,0 +1,23 @@
+.form-section {
+margin: 0 auto;
+background-image: url('./images/form-bg.png');
+}
+.form-container {
+    margin: 0 auto;
+}
+.form__title {
+
+}
+.form__description {
+
+}
+.form {
+    margin: 0 auto;
+display: flex;
+flex-direction: column;
+max-width: 651px;
+padding: 50px 50px 100px 50px;
+&>input {
+    border: 0 0 1px 0;
+}
+}

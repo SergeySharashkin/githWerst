@@ -1,5 +1,5 @@
+//переключение контента в списке с описанием
 const ulServ = document.querySelector(".service__list");
-
 let curentItem = ulServ.addEventListener("click", (e) => {
   let currentLi = document.querySelector(".service__item__current");
   let currentUL = document.querySelector(".service__content__list__active");
@@ -12,6 +12,7 @@ let curentItem = ulServ.addEventListener("click", (e) => {
   activatedUL.classList.add("service__content__list__active");
   return;
 });
+//для поворота кнопок крестиков
 const accordeon = document.querySelector(".questions__list");
 accordeon.addEventListener("click", selectBtn);
 function selectBtn(e) {
@@ -52,6 +53,9 @@ function pral() {
     console.log(upper)
   });
 }
+
+
+//Слайдер
 const projectLink = document.querySelector("#progLink");
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -66,7 +70,6 @@ function minusSlide() {
     showSlides(slideIndex -= 1);  
 }
 
-
 function showSlides(n) {
     const slides = document.getElementsByClassName("client__slide");
     if (n > slides.length) {
@@ -78,10 +81,8 @@ function showSlides(n) {
     for (let i = 0; i < slides.length; i+=1) {
         slides[i].style.display = "none";
     }
-    // for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    // }
+   
     slides[slideIndex - 1].style.display = "block";
     projectLink.href=slides[slideIndex - 1].getAttribute('data-src');
-    // dots[slideIndex - 1].className += " active";
+    
 }
