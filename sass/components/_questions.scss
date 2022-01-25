@@ -9,15 +9,26 @@
   flex-direction: column;
   position: relative;
   max-width: 1500px;
+  
 }
 .questions__text-contain {
-  max-width: 876px;
+  max-width: 900px;
   width: 100%;
   margin-left: auto;
 //   justify-content: flex-end;
 //   display: flex;
 //   flex-direction: column;
 //   align-items: flex-end;
+
+}
+.bgb3 {
+  bottom: -8%;
+  left: -5%;
+
+}
+.bgp3 {
+  top: 40%;
+  right: 5%;
 
 }
 .questions__title {

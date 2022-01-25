@@ -36,27 +36,24 @@ function selectBtn(e) {
 }
 const layers = document.querySelectorAll(".layers");
 const description = document.querySelector('.description');
-// const
+document.addEventListener('scroll', pral)
 function pral() {
-    
-  layers.forEach((layer) => {
+    layers.forEach((layer) => {
     let scrollHeight = document.documentElement.scrollTop;
     let speed = layer.getAttribute("data-speed");
     let movement = -((scrollHeight * speed) / 1000);
     let upper = `${35+movement}%`;
-    // layer.style["-webkit-transform"] = translate3d;
-    // layer.style["-moz-transform"] = translate3d;
-    // layer.style["-ms-transform"] = translate3d;
-    // layer.style["-o-transform"] = translate3d;
-    layer.style.top = upper;
-    description.style.paddingTop =`${120+movement}px`;
-    console.log(upper)
+        layer.style.top = upper;
+    description.style.paddingTop =`${150+movement}px`;
+    
+    
+    return console.log(description.style.paddingTop )
   });
 }
-
+// function pral();
 
 //Слайдер
-const projectLink = document.querySelector("#progLink");
+let projectLink = document.querySelector("#progLink");
 let slideIndex = 1;
 showSlides(slideIndex);
 

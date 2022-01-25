@@ -5,17 +5,35 @@
     margin: 0 auto;
     max-width: 1500px;
 }
+.clients__title {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+
+    font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 110%;
+/* or 70px */
+
+letter-spacing: 0.01em;
+
+color: #000000;
+margin-bottom: 103px;
+
+}
 .clients__baner {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     max-width: 1226px;
     background: #FFFFFF;
 box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
 border-radius: 11px;
 padding: 81px 89px 55px 85px;
-overflow: hidden;
+// overflow: hidden;
 position: relative;
 }
 .clients__baner__content {
@@ -171,7 +189,7 @@ flex-wrap: nowrap;
 //     transform: translateX(0);
 // }
 .slider{
-    max-width: 90%;
+    max-width: 100%;
     position: relative;
     margin: auto;
     // height: 300px;
