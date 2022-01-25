@@ -34,22 +34,54 @@ function selectBtn(e) {
   return;
 }
 const layers = document.querySelectorAll(".layers");
-const header = document.querySelector('.page-header');
+const description = document.querySelector('.description');
 // const
 function pral() {
     
   layers.forEach((layer) => {
     let scrollHeight = document.documentElement.scrollTop;
     let speed = layer.getAttribute("data-speed");
-    let movement = -((scrollHeight * speed) / 10000);
+    let movement = -((scrollHeight * speed) / 1000);
     let upper = `${35+movement}%`;
     // layer.style["-webkit-transform"] = translate3d;
     // layer.style["-moz-transform"] = translate3d;
     // layer.style["-ms-transform"] = translate3d;
     // layer.style["-o-transform"] = translate3d;
     layer.style.top = upper;
-    header.style.paddingBottom =`${20+movement}%`;
+    description.style.paddingTop =`${120+movement}px`;
     console.log(upper)
   });
 }
-document.addEventListener("scroll", pral);
+const projectLink = document.querySelector("#progLink");
+let slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("client__slide");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (let i = 0; i < slides.length; i+=1) {
+        slides[i].style.display = "none";
+    }
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    slides[slideIndex - 1].style.display = "block";
+    projectLink.href=slides[slideIndex - 1].getAttribute('data-src');
+    // dots[slideIndex - 1].className += " active";
+}

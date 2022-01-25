@@ -1,0 +1,210 @@
+.clients {
+    margin: 0 auto;
+}
+.clients__container{
+    margin: 0 auto;
+    max-width: 1500px;
+}
+.clients__baner {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1226px;
+    background: #FFFFFF;
+box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
+border-radius: 11px;
+padding: 81px 89px 55px 85px;
+overflow: hidden;
+position: relative;
+}
+.clients__baner__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.clients__baner__text-contain {
+    display: flex;
+    flex-direction: column;
+    max-width: 597px;
+}
+.clients__baner__link {
+    font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 1.31;
+text-align: left;
+margin: 0;
+margin-left: 57px;
+
+position: relative;
+
+color: #000000;
+&::before {
+    position: absolute;
+    top: -20px;
+    left: -57px;
+    content: "https://www.";
+    font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 47px;
+
+color: rgba(51, 196, 250, 0.45);
+}
+}
+.clients__baner__description {
+    margin-top: 50px;
+    font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 1.33;
+/* or 133% */
+
+
+color: #6E7681;
+}
+.clients__baner__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    /* identical to box height, or 100% */
+    
+    margin-top: 54px;
+    color: #58C3FF;  
+}
+.clients__list {
+display: flex;
+flex-wrap: nowrap;
+max-width: 670px;
+padding: 0;
+margin: 44px 0 0 0;
+}
+.clients__item {
+    position: relative;
+margin-right: 41px;
+&:last-child() {
+    margin: 0;
+}
+&::before {
+    content: '';
+    background-image: url('../images/beforePoints.svg');
+    background-position: center;
+    background-size: cover;
+    width: 63%;
+    height: 4px;
+    position: absolute;
+    top: -19px
+}
+}
+.clients__item__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    /* or 150% */
+    
+    
+    color: #24292F;
+}
+.clients__item__descriptions {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    /* or 187% */
+    
+    
+    color: #6E7681;
+}
+.clients__btn-contain {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.clients__slide__btn-contain {
+display: flex;
+flex-wrap: nowrap;
+}
+.slider__btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.__next {
+        transform: rotate(180deg);
+    }
+
+}
+.prog__btn {
+    padding: 0;
+    border: none;
+    background: none;
+    &>a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        
+        color: #2DD7FA;
+        &>span {
+            font-weight: lighter;
+            margin-left: 16px;
+            
+        }
+    }
+    
+}
+// .client__slide {
+//     object-fit: cover;
+//     width: 100%;
+// }
+// .active__slide {
+//     transform: translateX(0);
+// }
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    // height: 300px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .client__slide {
+    object-fit: cover;
+    width: 100%;
+   
+}
+
+
+/* Анимация слайдов */
+.slider .client__slide {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}

@@ -1,10 +1,11 @@
 
 .illustration {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
     @extend %auto-margin;
-    top: 35vh;
+    // top: 35vh;
+    margin-top: -175px;
    
     display: flex;
     align-items: center;

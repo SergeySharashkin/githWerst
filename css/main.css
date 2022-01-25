@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Alliance No.1';
   src: url("../fonts/AllianceNo1-Light.eot");
@@ -211,7 +212,7 @@ a {
 }
 
 .page-header {
-  padding-bottom: 20%;
+  max-width: 100vw;
 }
 
 .page-header__container {
@@ -227,7 +228,7 @@ a {
 }
 
 .page-header__main-contain {
-  max-width: 1500px;
+  max-width: 1600px;
   width: 100%;
   padding: 0 15px 0 15px;
 }
@@ -348,11 +349,7 @@ a {
 }
 
 .illustration {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 35vh;
+  margin-top: -175px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,6 +1161,312 @@ a {
   width: 90%;
   height: auto;
   margin: 15px;
+}
+
+.img__container {
+  position: relative;
+  height: 275px;
+  width: 423px;
+  margin: 0 auto;
+}
+
+.animate-img {
+  position: absolute;
+  height: 275px;
+  width: 423px;
+  left: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.first-img {
+  -webkit-animation-name: cf3FadeInOut;
+          animation-name: cf3FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  z-index: 1;
+}
+
+@-webkit-keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.clients {
+  margin: 0 auto;
+}
+
+.clients__container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.clients__baner {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1226px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
+          box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
+  border-radius: 11px;
+  padding: 81px 89px 55px 85px;
+  overflow: hidden;
+  position: relative;
+}
+
+.clients__baner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.clients__baner__text-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 597px;
+}
+
+.clients__baner__link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.31;
+  text-align: left;
+  margin: 0;
+  margin-left: 57px;
+  position: relative;
+  color: #000000;
+}
+
+.clients__baner__link::before {
+  position: absolute;
+  top: -20px;
+  left: -57px;
+  content: "https://www.";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  color: rgba(51, 196, 250, 0.45);
+}
+
+.clients__baner__description {
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.33;
+  /* or 133% */
+  color: #6E7681;
+}
+
+.clients__baner__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  margin-top: 54px;
+  color: #58C3FF;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  max-width: 670px;
+  padding: 0;
+  margin: 44px 0 0 0;
+}
+
+.clients__item {
+  position: relative;
+  margin-right: 41px;
+}
+
+.clients__item:last-child {
+  margin: 0;
+}
+
+.clients__item::before {
+  content: '';
+  background-image: url("../images/beforePoints.svg");
+  background-position: center;
+  background-size: cover;
+  width: 63%;
+  height: 4px;
+  position: absolute;
+  top: -19px;
+}
+
+.clients__item__name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  /* or 150% */
+  color: #24292F;
+}
+
+.clients__item__descriptions {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 187% */
+  color: #6E7681;
+}
+
+.clients__btn-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.clients__slide__btn-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.slider__btn {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+  border: none;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__btn.__next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.prog__btn {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.prog__btn > a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2DD7FA;
+}
+
+.prog__btn > a > span {
+  font-weight: lighter;
+  margin-left: 16px;
+}
+
+.slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .client__slide {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+/* Анимация слайдов */
+.slider .client__slide {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .footer__title {
