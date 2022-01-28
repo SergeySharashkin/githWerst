@@ -33,7 +33,14 @@
   //   justify-content: center;
   //   align-items: center;
   @media screen and (max-width: 1500px) {
-    font-size: 72px;
+   font-size: 72px; 
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 48px;
+
+  }
+  @media screen and (max-width: 543px) {
+    font-size: 32px;
   }
 }
 // .rotating-text p .word .letter {
@@ -44,7 +51,10 @@
   transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
 .rotating-text p .word .letter.in {
-  transition: 0.38s ease;
+  transition: 0.38s cubic-bezier(0.6, 0, 0.7, 0.2);
+  &.__long {
+    transition: 0.1s cubic-bezier(0.6, 0, 0.7, 0.2);
+  }
 }
 .rotating-text p .word .letter.behind {
   transform: rotateX(-90deg);

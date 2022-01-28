@@ -3,14 +3,15 @@
   padding-top: 247px;
   padding-bottom: 250px;
   position: relative;
-  
-  &:hover .banner__overlay {
-    opacity: 0.8;
-    z-index: -5;
-  }
-  &:hover .competitors__container {
-    transform: scale(1.1);
-  }
+  padding-left: 15px;
+  padding-right: 15px;
+  // &:hover .banner__overlay {
+  //   opacity: 0.8;
+
+  // }
+  // &:hover .competitors__container {
+  //   transform: scale(1.1);
+  // }
 }
 .competitors__container {
   padding-left: 15px;
@@ -18,47 +19,63 @@
   margin: 0 auto;
   position: relative;
   max-width: 1500px;
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  
-  &::before {
-    content: "";
-    background-image: url("../images/Polygon.png");
-    width: 893px;
-    height: 893px;
-    position: absolute;
-    z-index: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: -10%;
-    top: -25%;
+  z-index: 10;
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 750px) {
+    max-width: 750px;
   }
-  &::after {
-    content: "";
-    background-image: url("../images/bg-ball1.png");
-    width: 520px;
-    height: 520px;
-    position: absolute;
-    z-index: -1;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: -5%;
-    bottom: -15%;
+  @media screen and (max-width: 543px) {
+    max-width: 543px;
   }
 }
 .competitors__baner {
-  // width: 100%;
-  max-width: 1480px;
-  height: 624px;
   margin: 0 auto;
-  background: content-box url("../images/baner.png");
+  width: 100%;
+  max-width: 75vw;
+  padding: 25px;
+    background-color: blue;
+   background: linear-gradient(#3264ee, #616df0);
   background-size: cover;
-  z-index: 10;
-
+  // z-index: 1;
+  // position: relative;
   filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
   border-radius: 11px;
+ 
+  &::before {
+    content: "";
+    background: url("../images/Polygon.png");
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    z-index: -1000 !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -10vw;
+    top: -10vw;
+    
+  }
+  &::after {
+    content: "";
+    background: url("../images/bg-ball1.png");
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    z-index: -1000 !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: -10vw;
+    bottom: -5vw;
+    @media screen and (max-width: 750px) {
+      width: 300px;
+      height: 300px;
+    }
+    @media screen and (max-width: 543px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 .banner__overlay {
   position: fixed;
@@ -67,7 +84,7 @@
   width: 200vw;
   height: 200vw;
   background-color: #5738c7c4;
-  z-index: -1;
+  z-index: -5;
   opacity: 0;
   pointer-events: none;
   transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,6 +101,12 @@
   letter-spacing: 0.01em;
 
   color: #ffffff;
+  @media screen and (max-width: 750px) {
+    font-size: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .competitors__text {
   font-style: normal;
@@ -98,6 +121,12 @@
   color: #ffffff;
   & > span {
     font-weight: 700;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .competitors__btn {

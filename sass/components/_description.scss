@@ -1,10 +1,42 @@
 .description { 
+    margin: 0 auto;
+    padding-top: 200px;
+    width: 100%;
+    @media screen and (max-width: 750px) {
+     padding: 350;
+    }
+    @media screen and (max-width: 543px) {
+      max-width: 543px;
+      height: 200px;
+    }
+   }
+.desc-bg {
   margin: 0 auto;
-    padding-top: 150px;
+  // padding: 0 15px;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+  @media screen and (max-width: 750px) {
+    max-width: 750px;
+    // max-height: 450px;
+  }
+  @media screen and (max-width: 543px) {
+    max-width: 543px;
+    width: 100%;
+    // height: 200px;
+  }
 }
 .description__container {
+  padding-top: 150px;
   margin: 0 auto;
-  max-width: max-content;
+  width: max-content;
+  max-width: 100%;
+  @media screen and (max-width: 750px) {
+        max-width: 750px;
+  }
+  @media screen and (max-width: 543px) {
+    max-width: 543px;
+}
   }
 .description__first {
  display: flex; 
@@ -19,6 +51,16 @@
   margin-left: 123px;
   margin-right: 29px;
   position: relative;
+  padding-left: 15%;
+  box-sizing: content-box;
+  @media screen and (max-width: 750px) {
+    padding-left: 100px;
+    max-width: 350px;
+  }
+  @media screen and (max-width: 543px) {
+    padding-left: 100px;
+    max-width: 350px;
+  }
 &::before {
   content: '';
 background: url('../images/greyball.png');
@@ -27,10 +69,16 @@ height: 182px;
 position: absolute;
 top: -15%;
 left: 12%;
-z-index: -1;
+z-index: 0;
+@media screen and (max-width: 750px) {
+  width: 70px;
+height: 70px;
+background-size: contain;
+}
 // border: 1px solid #AAAAAA;
 // max-width: max-content;
 }
+
 }
 .description__title {
   font-style: normal;
@@ -40,6 +88,13 @@ line-height: 1.05;
 letter-spacing: 0.01em;
 margin-bottom: 51px;
 color: $prim-black;
+z-index: 3;
+@media screen and (max-width: 750px) {
+  font-size: 32px;
+  
+  // max-height: 450px;
+}
+
 }
 .description__text {
   font-family: Alliance No.1;
@@ -48,17 +103,45 @@ font-weight: 500;
 font-size: 24px;
 line-height: 1.33;
 color: $sec-black;
+@media screen and (max-width: 750px) {
+  font-size: 16px;
+  // max-height: 450px;
+}
 }
 .description__point-first {
   width: 420px;
   height: 247px;
-  // padding: 0;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: -35%;
+  @media screen and (max-width: 750px) {
+    width: 210px;
+  height: 123px;
+  top: 30px;
+  left: 0%;
+  
+  }
+
 }
 .description__point-sec {
-  // padding-top: 175px
-  position: absolute;
+    position: absolute;
   right: -10%;
-  top: 50%
+  top: 50%;
+  @media screen and (max-width: 750px) {
+    width: 120px;
+  height: 200px;
+  right: 7%;
+  top: 40%;
+  transform: translate(0) !important;
+  }
+  @media screen and (max-width: 750px) {
+    width: 120px;
+  height: 200px;
+  right: 7%;
+  top: 40%;
+  transform: none;
+  }
 }
 .description__list-contain {
   max-width: 980px;
@@ -66,6 +149,12 @@ color: $sec-black;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  @media screen and (max-width: 750px) {
+    max-width: 720px;
+    
+  
+  // background-size: contain;
+  }
 }
 
 .description__list {
@@ -76,11 +165,31 @@ flex-wrap: wrap;
 width: 100%;
 margin: -25px;
 padding: 0;
+@media screen and (max-width: 750px) {
+  margin-right: auto;
+  margin-left: auto;
+  }
+@media screen and (max-width: 540px) {
+ justify-content: center;
+ flex-direction: column;
+}
 }
 .description__item {
-  width: calc((100% - 6 * 20px) / 3);
+  width: calc((100% - 6 * 25px) / 3);
   max-width: 300px;
-  margin: 20px;
+  margin: 25px;
+  @media screen and (max-width: 750px) {
+    width: calc((100% - 4 * 25px) / 2);
+    margin: 25px;
+    max-width: none;
+   
+  }
+  @media screen and (max-width: 540px) {
+    width: calc((100% - 2 * 25px));
+    max-width: 450px;
+    margin: 20px;
+    // max-width: none;
+  }
   // &:nth-child(3n) {
   //   mar
   // }

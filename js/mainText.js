@@ -1,11 +1,11 @@
 var words = document.querySelectorAll(".word");
 words.forEach(function (word) {
     var letters = word.textContent.split("");
-    console.log(letters)
+    // console.log(letters)
     word.textContent = "";
     letters.forEach(function (letter) {
         var span = document.createElement("span");
-        console.log(letter)
+        // console.log(letter)
         span.className = "letter";
         if(letter !== ' ') {span.textContent = letter;}
         else {span.textContent = "_";
@@ -24,15 +24,16 @@ var rotateText = function () {
     Array.from(currentWord.children).forEach(function (letter, i) {
         setTimeout(function () {
             letter.className = "letter out";
-        }, i * 80);
+        }, i * 30);
     });
     // reveal and rotate in letters of next word
     nextWord.style.opacity = "1";
     Array.from(nextWord.children).forEach(function (letter, i) {
         letter.className = "letter behind";
+        
         setTimeout(function () {
             letter.className = "letter in";
-        }, 340 + i * 80);
+        }, 340 + i * 30);
     });
     currentWordIndex =
         currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
