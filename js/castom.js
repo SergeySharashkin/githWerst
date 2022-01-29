@@ -1,17 +1,43 @@
 //переключение контента в списке с описанием
 const ulServ = document.querySelector(".service__list");
-let curentItem = ulServ.addEventListener("click", (e) => {
-  let currentLi = document.querySelector(".service__item__current");
-  let currentUL = document.querySelector(".service__content__list__active");
-  let clickedId = e.target.id;
-  let activatedEl = document.querySelector(`#${clickedId}`);
-  let activatedUL = document.querySelector(`#${clickedId}List`);
-  currentLi.classList.remove("service__item__current");
-  currentUL.classList.remove("service__content__list__active");
-  activatedEl.classList.add("service__item__current");
-  activatedUL.classList.add("service__content__list__active");
+let activeBth = null;
+function firstRender() {
+  const content = document.querySelector(".service__content__list");
+  const btn = document.querySelector(".service__item");
+  if (document.documentElement.clientWidth > 543) {
+    content.classList.add("service__content__list__active");
+    btn.classList.add("service__item__current");
+  }
   return;
-});
+}
+firstRender();
+function serviseUpdater(e) {
+  const clickedId = e.target.id;
+  const currentLi = document.querySelector(".service__item__current");
+  const currentUL = document.querySelector(".service__content__list__active");
+  const activatedEl = document.querySelector(`#${clickedId}`);
+  const activatedUL = document.querySelector(`#${clickedId}List`);
+  if (document.documentElement.clientWidth > 543) {
+    currentLi.classList.remove("service__item__current");
+    currentUL.classList.remove("service__content__list__active");
+    activatedEl.classList.add("service__item__current");
+    activatedUL.classList.add("service__content__list__active");
+    return;
+  } else if (document.documentElement.clientWidth < 543) {
+    activatedUL.classList.add("service__content__list__active");
+    activeBth = activatedUL.querySelector(".btn__close");
+    activeBth.addEventListener("click", () => {
+      activatedUL.classList.remove("service__content__list__active");
+      activeBth = null;
+      // }
+      return;
+    });
+    return;
+  }
+}
+
+let curentItem = ulServ.addEventListener("click", serviseUpdater);
+
 //для поворота кнопок крестиков
 const accordeons = document.querySelectorAll(".questions__item");
 
@@ -19,24 +45,44 @@ const accordeons = document.querySelectorAll(".questions__item");
   accordeon.addEventListener("click", selectQest)
 );
 function selectQest(e) {
-  e.preventDefault();
+  // e.preventDefault();
+  const activeTextContain = document.querySelector(".active_item");
+  const activeBtn = document.querySelector(".btn__is-active");
   const currentQest = e.currentTarget;
   const currentBtn = currentQest.querySelector(".questions__item__btn");
   const currentTextContain = currentQest.querySelector(
     ".questions__item__content"
   );
   const answerContent = currentQest.querySelector(".questions__item__text");
-  if (currentBtn.classList.contains("btn__is-active")) {
-    currentBtn.classList.remove("btn__is-active");
-    currentTextContain.style.height = null;
+  if (activeTextContain) {
+    activeTextContain.classList.remove("active_item");
+    activeBtn.classList.remove("btn__is-active");
+    activeTextContain.style.maxHeight = 0;
+    if (activeTextContain.textContent != currentTextContain.textContent) {
+      currentBtn.classList.add("btn__is-active");
+      currentTextContain.classList.add("active_item");
+      currentTextContain.style.maxHeight = answerContent.scrollHeight + "px";
+    }
+
     return;
-  } else {
-    currentBtn.classList.add("btn__is-active");
-    currentTextContain.classList.add("active_item");
-    currentTextContain.style.height = `200px`;
   }
+
+  currentBtn.classList.add("btn__is-active");
+  currentTextContain.classList.add("active_item");
+  currentTextContain.style.maxHeight = answerContent.scrollHeight + "px";
   return;
 }
+//   if (currentBtn.classList.contains("btn__is-active")) {
+//     currentBtn.classList.remove("btn__is-active");
+//     currentTextContain.style.maxHeight = 0;
+//     return;
+//   } else {
+//     currentBtn.classList.add("btn__is-active");
+//     currentTextContain.classList.add("active_item");
+//     currentTextContain.style.maxHeight = answerContent.scrollHeight + "px";
+//   }
+//   return;
+// }
 
 const pral = document.querySelector(".js-pral");
 window.addEventListener("scroll", () => {
@@ -61,9 +107,12 @@ const pralPoints1 = document.querySelector(".description__point-first");
 const pralPoints2 = document.querySelector(".description__point-sec");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset < 1200 && window.pageYOffset > 600) {
-    pralPoints1.style.transform = "translateY(" + (window.pageYOffset-600) / 5 + "px)";
-    pralPoints2.style.transform = "translateY(" + (window.pageYOffset-600) / 1.5 + "px)";
-  }})
+    pralPoints1.style.transform =
+      "translateY(" + (window.pageYOffset - 600) / 5 + "px)";
+    pralPoints2.style.transform =
+      "translateY(" + (window.pageYOffset - 600) / 1.5 + "px)";
+  }
+});
 //Слайдер
 let projectLink = document.querySelector("#progLink");
 let slideIndex = 1;
@@ -91,7 +140,7 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.display = "flex";
   projectLink.href = slides[slideIndex - 1].getAttribute("data-src");
 }
 

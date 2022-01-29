@@ -5,13 +5,14 @@
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
-  // &:hover .banner__overlay {
-  //   opacity: 0.8;
-
-  // }
-  // &:hover .competitors__container {
-  //   transform: scale(1.1);
-  // }
+  @media screen and (max-width: 750px) {
+    padding-top: 167px;
+    padding-bottom: 150px;
+  }
+  @media screen and (max-width: 543px) {
+    padding-bottom: 100px;
+    padding-top: 120px;
+  }
 }
 .competitors__container {
   padding-left: 15px;
@@ -31,50 +32,51 @@
 .competitors__baner {
   margin: 0 auto;
   width: 100%;
-  max-width: 75vw;
-  padding: 25px;
-    background-color: blue;
-   background: linear-gradient(#3264ee, #616df0);
+  max-width: 1280px;
+  padding: 63px 90px 49px 90px;
+  background: radial-gradient(circle at top left, #4a42ec 0%, #521d91 100%);
+  background-color: #521d91;
   background-size: cover;
   // z-index: 1;
   // position: relative;
-  filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
+  // filter: drop-shadow(0px 55px 100px rgba(0, 0, 0, 0.25));
   border-radius: 11px;
- 
-  &::before {
-    content: "";
-    background: url("../images/Polygon.png");
-    width: 30vw;
-    height: 30vw;
-    position: absolute;
-    z-index: -1000 !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: -10vw;
-    top: -10vw;
-    
+  box-shadow: 0 48px 48px -32px rgba(23, 16, 159, 20%),
+    0 96px 96px -64px rgba(3, 2, 20, 60%);
+  @media screen and (max-width: 543px) {
+    padding: 30px 30px 30px 30px;
   }
-  &::after {
-    content: "";
-    background: url("../images/bg-ball1.png");
-    width: 15vw;
-    height: 15vw;
-    position: absolute;
-    z-index: -1000 !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: -10vw;
-    bottom: -5vw;
-    @media screen and (max-width: 750px) {
-      width: 300px;
-      height: 300px;
-    }
-    @media screen and (max-width: 543px) {
-      width: 150px;
-      height: 150px;
-    }
+}
+.bg-poli {
+  content: url("../images/Polygon.png");
+  width: 46vw;
+  height: 46vw;
+  position: absolute;
+  z-index: -1000 !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: -10vw;
+  top: -10vw;
+}
+.bg-ball__ban {
+  content: url("../images/bg-ball1.png");
+  width: 27vw;
+  height: 27vw;
+  position: absolute;
+  z-index: -1000 !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: -10vw;
+  bottom: -10vw;
+  @media screen and (max-width: 750px) {
+    width: 300px;
+    height: 300px;
+  }
+  @media screen and (max-width: 543px) {
+    width: 150px;
+    height: 150px;
   }
 }
 .banner__overlay {
@@ -90,7 +92,6 @@
   transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .competitors_title {
-  padding-top: 100px;
   font-style: 700;
   font-weight: 900;
   font-size: 48px;
@@ -103,6 +104,12 @@
   color: #ffffff;
   @media screen and (max-width: 750px) {
     font-size: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (max-width: 543px) {
+    font-size: 26px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -127,6 +134,8 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
 .competitors__btn {
@@ -150,5 +159,10 @@
   &:focus {
     background-color: aquamarine;
     color: black;
+  }
+  @media screen and (max-width: 543px) {
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
   }
 }

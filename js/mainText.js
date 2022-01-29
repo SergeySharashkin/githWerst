@@ -39,4 +39,4 @@ var rotateText = function () {
         currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
 };
 rotateText();
-setInterval(rotateText, 4000);
+setInterval(rotateText, 3500);

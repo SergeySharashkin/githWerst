@@ -1,230 +1,262 @@
 .clients {
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
-.clients__container{
-    margin: 0 auto;
-    max-width: 1500px;
+.clients__container {
+  margin: 0 auto;
+  max-width: 1500px;
 }
 .clients__title {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
 
-    font-style: normal;
-font-weight: bold;
-font-size: 64px;
-line-height: 110%;
-/* or 70px */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 110%;
+  /* or 70px */
 
-letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
 
-color: #000000;
-margin-bottom: 103px;
-
+  color: #000000;
+  margin-bottom: 103px;
+  @media screen and (max-width: 750px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 }
 .clients__baner {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1226px;
-    background: #FFFFFF;
-box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
-border-radius: 11px;
-padding: 81px 89px 55px 85px;
-// overflow: hidden;
-position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+//   justify-content: space-between;
+  width: 100%;
+  max-width: 1226px;
+  background: #ffffff;
+  box-shadow: 0px 25px 100px -10px rgba(110, 118, 129, 0.2);
+  border-radius: 11px;
+  padding: 81px 89px 55px 85px;
+  // overflow: hidden;
+  position: relative;
+  @media screen and (max-width: 750px) {
+    padding: 25px 30px;
+    max-width: 750px;
+  }
 }
 .clients__baner__content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 750px;
+  flex-direction: column;
+  
 }
 .clients__baner__text-contain {
-    display: flex;
-    flex-direction: column;
-    max-width: 597px;
+  display: flex;
+  flex-direction: column;
+  max-width: 597px;
+  @media screen and (max-width: 750px) {
+    max-width: 300px;
+    // margin-bottom: 20px;
+  }
 }
 .clients__baner__link {
-    font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 1.31;
-text-align: left;
-margin: 0;
-margin-left: 57px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.31;
+  text-align: left;
+  margin: 0;
+  margin-left: 57px;
 
-position: relative;
+  position: relative;
 
-color: #000000;
-&::before {
+  color: #000000;
+  &::before {
     position: absolute;
     top: -20px;
     left: -57px;
     content: "https://www.";
     font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 47px;
-
-color: rgba(51, 196, 250, 0.45);
-}
+    color: rgba(51, 196, 250, 0.45);
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 24px;
+    &::before {
+      top: -10px;
+    }
+    // margin-bottom: 20px;
+  }
 }
 .clients__baner__description {
-    margin-top: 50px;
-    font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 1.33;
-/* or 133% */
-
-
-color: #6E7681;
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #6e7681;
+  @media screen and (max-width: 750px) {
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }
 .clients__baner__title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 1;
-    /* identical to box height, or 100% */
-    
-    margin-top: 54px;
-    color: #58C3FF;  
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1;
+  /* identical to box height, or 100% */
+
+  margin-top: 54px;
+  color: #58c3ff;
+  @media screen and (max-width: 750px) {
+    font-size: 24px;
+    margin-top: 25px;
+  }
 }
 .clients__list {
-display: flex;
-flex-wrap: nowrap;
-max-width: 670px;
-padding: 0;
-margin: 44px 0 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 670px;
+  padding: 0;
+  margin: 44px 0 0 0;
+  @media screen and (max-width: 750px) {
+   margin-top: 25px;
+    // margin-bottom: 20px;
+  }
 }
 .clients__item {
-    position: relative;
-margin-right: 41px;
-&:last-child() {
+  position: relative;
+  margin-right: 41px;
+  &:last-child() {
     margin: 0;
-}
-&::before {
-    content: '';
-    background-image: url('../images/beforePoints.svg');
+  }
+  &::before {
+    content: "";
+    background-image: url("../images/beforePoints.svg");
     background-position: center;
     background-size: cover;
     width: 63%;
     height: 4px;
     position: absolute;
-    top: -19px
-}
+    top: -19px;
+  }
+  @media screen and (max-width: 750px) {
+    margin-right: 25pxpx;
+    // margin-bottom: 20px;
+  }
 }
 .clients__item__name {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    /* or 150% */
-    
-    
-    color: #24292F;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  /* or 150% */
+
+  color: #24292f;
 }
 .clients__item__descriptions {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-    /* or 187% */
-    
-    
-    color: #6E7681;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 187% */
+
+  color: #6e7681;
 }
 .clients__btn-contain {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 .clients__slide__btn-contain {
-display: flex;
-flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .slider__btn {
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    margin-right: 40px;
-    
-    border: none;
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &.__next {
-        transform: rotate(180deg);
-    }
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
 
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.__next {
+    transform: rotate(180deg);
+  }
 }
 .prog__btn {
-    padding: 0;
-    border: none;
-    background: none;
-    &>a {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        
-        color: #2DD7FA;
-        &>span {
-            font-weight: lighter;
-            margin-left: 16px;
-            
-        }
+  padding: 0;
+  border: none;
+  background: none;
+  & > a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #2dd7fa;
+    & > span {
+      font-weight: lighter;
+      margin-left: 16px;
     }
-    
+  }
 }
-// .client__slide {
-//     object-fit: cover;
-//     width: 100%;
-// }
-// .active__slide {
-//     transform: translateX(0);
-// }
-.slider{
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-    // height: 300px;
-    margin-bottom: 15px;
+
+.slider {
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  // height: 300px;
+  margin-bottom: 15px;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .client__slide {
-    object-fit: cover;
-    width: 100%;
-   
+//   object-fit: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+//   max-width: 700px;
+ 
 }
-
+.client__slide {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // max-width: ;
+}
+.client_slide_text_content {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Анимация слайдов */
 .slider .client__slide {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,15 +1,15 @@
-.description { 
-    margin: 0 auto;
-    padding-top: 200px;
-    width: 100%;
-    @media screen and (max-width: 750px) {
-     padding: 350;
-    }
-    @media screen and (max-width: 543px) {
-      max-width: 543px;
-      height: 200px;
-    }
-   }
+.description {
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 100%;
+  @media screen and (max-width: 750px) {
+    padding: 350;
+  }
+  @media screen and (max-width: 543px) {
+    max-width: 543px;
+    // height: 200px;
+  }
+}
 .desc-bg {
   margin: 0 auto;
   // padding: 0 15px;
@@ -32,17 +32,20 @@
   width: max-content;
   max-width: 100%;
   @media screen and (max-width: 750px) {
-        max-width: 750px;
+    max-width: 750px;
   }
   @media screen and (max-width: 543px) {
     max-width: 543px;
-}
   }
+}
 .description__first {
- display: flex; 
- position: relative;
- margin-bottom: 135px;
-//  align-items: flex-end;
+  display: flex;
+  position: relative;
+  margin-bottom: 135px;
+  @media screen and (max-width: 543px) {
+    margin-bottom: 50px;
+  }
+  //  align-items: flex-end;
 }
 .description__text-contain {
   display: flex;
@@ -58,55 +61,55 @@
     max-width: 350px;
   }
   @media screen and (max-width: 543px) {
-    padding-left: 100px;
-    max-width: 350px;
+    padding-left: 50px;
+    max-width: 50vw;
+   
   }
-&::before {
-  content: '';
-background: url('../images/greyball.png');
-width: 182px;
-height: 182px;
-position: absolute;
-top: -15%;
-left: 12%;
-z-index: 0;
-@media screen and (max-width: 750px) {
-  width: 70px;
-height: 70px;
-background-size: contain;
-}
-// border: 1px solid #AAAAAA;
-// max-width: max-content;
-}
-
+  &::before {
+    content: "";
+    background: url("../images/greyball.png");
+    width: 182px;
+    height: 182px;
+    position: absolute;
+    top: -15%;
+    left: 12%;
+    z-index: 0;
+    @media screen and (max-width: 750px) {
+      width: 70px;
+      height: 70px;
+      background-size: contain;
+    }
+    
+  }
 }
 .description__title {
   font-style: normal;
-font-weight: 800;
-font-size: 64px;
-line-height: 1.05;
-letter-spacing: 0.01em;
-margin-bottom: 51px;
-color: $prim-black;
-z-index: 3;
-@media screen and (max-width: 750px) {
-  font-size: 32px;
-  
-  // max-height: 450px;
-}
-
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin-bottom: 51px;
+  color: $prim-black;
+  z-index: 3;
+  @media screen and (max-width: 750px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 543px) {
+    
+  }
 }
 .description__text {
   font-family: Alliance No.1;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 1.33;
-color: $sec-black;
-@media screen and (max-width: 750px) {
-  font-size: 16px;
-  // max-height: 450px;
-}
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33;
+  color: $sec-black;
+  @media screen and (max-width: 750px) {
+    font-size: 16px;
+    // max-height: 450px;
+  }
+  
 }
 .description__point-first {
   width: 420px;
@@ -117,30 +120,35 @@ color: $sec-black;
   left: -35%;
   @media screen and (max-width: 750px) {
     width: 210px;
-  height: 123px;
-  top: 30px;
-  left: 0%;
-  
+    height: 123px;
+    top: 30px;
+    left: 0%;
   }
-
+  @media screen and (max-width: 543px) {
+    width: 150px;
+    height: 80px;
+    right: 7%;
+    top: 40%;
+    transform: none;
+  }
 }
 .description__point-sec {
-    position: absolute;
+  position: absolute;
   right: -10%;
   top: 50%;
   @media screen and (max-width: 750px) {
     width: 120px;
-  height: 200px;
-  right: 7%;
-  top: 40%;
-  transform: translate(0) !important;
+    height: 200px;
+    right: 7%;
+    top: 40%;
+    transform: translate(0) !important;
   }
-  @media screen and (max-width: 750px) {
-    width: 120px;
-  height: 200px;
-  right: 7%;
-  top: 40%;
-  transform: none;
+  @media screen and (max-width: 543px) {
+    width: 80px;
+    height: 160px;
+    right: 0;
+    top: 40%;
+    transform: none;
   }
 }
 .description__list-contain {
@@ -151,28 +159,30 @@ color: $sec-black;
   margin: 0 auto;
   @media screen and (max-width: 750px) {
     max-width: 720px;
-    
-  
-  // background-size: contain;
+
+    // background-size: contain;
   }
 }
 
 .description__list {
   // @extend %auto-margin;
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-width: 100%;
-margin: -25px;
-padding: 0;
-@media screen and (max-width: 750px) {
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  margin: -25px;
+  padding: 0;
+  @media screen and (max-width: 750px) {
+    margin-right: auto;
+    margin-left: auto;
   }
-@media screen and (max-width: 540px) {
- justify-content: center;
- flex-direction: column;
-}
+  @media screen and (max-width: 543px) {
+    //  justify-content: center;
+    flex-direction: column;
+    margin: 0;
+
+    justify-content: flex-end;
+  }
 }
 .description__item {
   width: calc((100% - 6 * 25px) / 3);
@@ -182,12 +192,22 @@ padding: 0;
     width: calc((100% - 4 * 25px) / 2);
     margin: 25px;
     max-width: none;
-   
   }
   @media screen and (max-width: 540px) {
-    width: calc((100% - 2 * 25px));
+    width: 100%;
     max-width: 450px;
-    margin: 20px;
+    // margin: 20px;
+    position: relative;
+    // max-width: 70vw;
+text-align: right;
+    &:nth-last-child(2n) {
+      text-align: left;
+      &>.description__item__picture {
+        opacity: 0.2;
+        position: absolute;
+        left: 20px;
+      }
+    }
     // max-width: none;
   }
   // &:nth-child(3n) {
@@ -198,25 +218,31 @@ padding: 0;
   width: 87px;
   height: 101px;
   fill: black;
+  @media screen and (max-width: 540px) {
+    opacity: 0.2;
+    position: absolute;
+    right: 20px;
+    top:-20px;
+    &:nth-last-child(2n) {
+      left: 20px;
+    }
+    // max-width: none;
+  }
 }
 .description__item__title {
   font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 1.5;
-margin-top: 19px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 19px;
 
-
-
-color: $prim-black;
+  color: $prim-black;
 }
 .description__item__text {
   font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
 
-
-
-color: $sec-black;
+  color: $sec-black;
 }
