@@ -1044,7 +1044,7 @@ a {
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 543px) {
   .description__item {
     width: 100%;
     max-width: 450px;
@@ -1067,7 +1067,7 @@ a {
   fill: black;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 543px) {
   .description__item__picture {
     opacity: 0.2;
     position: absolute;
@@ -1183,7 +1183,7 @@ a {
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 543px) {
   .service__content {
     position: relative;
   }
@@ -1790,8 +1790,7 @@ a {
 
 @media screen and (max-width: 750px) {
   .questions__item__title {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 20px;
   }
 }
 
@@ -1835,6 +1834,13 @@ a {
   padding-left: 15px;
 }
 
+@media screen and (max-width: 543px) {
+  .questions__item__text {
+    font-size: 16px;
+    padding-left: 0;
+  }
+}
+
 .img__container {
   position: relative;
   height: auto;
@@ -1850,6 +1856,19 @@ a {
   .img__container {
     max-width: 300px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .img__container {
+    max-width: 543;
+    width: 100%;
+    margin: 0;
+    height: 250px;
+    max-height: 196px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
   }
 }
 
@@ -1973,6 +1992,7 @@ a {
   margin: 0 auto;
   z-index: 1;
   position: relative;
+  padding: 0 15px;
 }
 
 .clients__container {
@@ -2027,6 +2047,13 @@ a {
   }
 }
 
+@media screen and (max-width: 543px) {
+  .clients__baner {
+    max-width: 543px;
+    height: auto;
+  }
+}
+
 .clients__baner__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2059,6 +2086,13 @@ a {
   }
 }
 
+@media screen and (max-width: 543px) {
+  .clients__baner__text-contain {
+    max-width: 543px;
+    width: 100%;
+  }
+}
+
 .clients__baner__link {
   font-style: normal;
   font-weight: bold;
@@ -2086,6 +2120,12 @@ a {
   }
   .clients__baner__link::before {
     top: -10px;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .clients__baner__link {
+    margin: 0 auto;
   }
 }
 
@@ -2139,6 +2179,13 @@ a {
   }
 }
 
+@media screen and (max-width: 543px) {
+  .clients__list {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
 .clients__item {
   position: relative;
   margin-right: 41px;
@@ -2161,7 +2208,7 @@ a {
 
 @media screen and (max-width: 750px) {
   .clients__item {
-    margin-right: 25pxpx;
+    margin-right: 25px;
   }
 }
 
@@ -2192,6 +2239,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 543px) {
+  .clients__btn-contain {
+    display: none;
+  }
 }
 
 .clients__slide__btn-contain {
@@ -2271,6 +2324,15 @@ a {
       flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 543px) {
+  .client__slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .client_slide_text_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2305,6 +2367,56 @@ a {
   to {
     opacity: 1;
   }
+}
+
+.client__btn-contain__mob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.client__btn__mob {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.client__btn__mob:last-child {
+  margin-right: 0;
+}
+
+.client__btn__mob.bgc1 {
+  background: url("../images/img11.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.client__btn__mob.bgc2 {
+  background: url("../images/img21.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.client__btn__mob.bgc3 {
+  background: url("../images/img31.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.client__btn__mob.bgc4 {
+  background: url("../images/img41.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.client__btn__mob.bgc5 {
+  background: url("../images/img51.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .form-section {

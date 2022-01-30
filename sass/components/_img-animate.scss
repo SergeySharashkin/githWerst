@@ -19,6 +19,17 @@
     width: 100%;
     // margin-bottom: 20px;
   }
+  @media screen and (max-width: 543px) {
+    max-width: 543;
+    width: 100%;
+    margin: 0;
+height: 250px;
+max-height: 196px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 25px;
+    // margin-bottom: 20px;
+  }
 }
 .animate-img {
   position: absolute;
