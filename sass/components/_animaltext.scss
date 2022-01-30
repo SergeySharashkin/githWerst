@@ -1,10 +1,10 @@
-//  body {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-//     background: #222;
-//   }
+ body {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 100vh;
+    // background: #222;
+  }
 
   .rotating-text p {
     position: relative;
@@ -41,6 +41,9 @@
   }
   @media screen and (max-width: 543px) {
     font-size: 32px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 24px;
   }
 }
 // .rotating-text p .word .letter {

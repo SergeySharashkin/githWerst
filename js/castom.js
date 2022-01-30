@@ -113,6 +113,7 @@ window.addEventListener("scroll", () => {
       "translateY(" + (window.pageYOffset - 600) / 1.5 + "px)";
   }
 });
+
 //Слайдер
 let projectLink = document.querySelector("#progLink");
 let slideIndex = 1;
@@ -143,6 +144,96 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex";
   projectLink.href = slides[slideIndex - 1].getAttribute("data-src");
 }
+//mobslider
+let itemIndex = 1;
+// let prewBtn = null;
+// let nextBtn = null;
+const mobFirstSlide = document.querySelector(".client__slide");
+const momSlidesBtnsContain = document.querySelector(
+  ".client__btn-contain__mob"
+);
+momSlidesBtnsContain.addEventListener("click", mobSlideSow);
+function mobSlideSow(e) {
+  if (document.documentElement.clientWidth<543) {
+    const activeBtn = document.querySelector(".client__btn__mob--active");
+    const activeBtnId = activeBtn.attributes.id.textContent;
+    const activeSlide = document.getElementById(`${activeBtnId}ac`);
+    const currentBtn = e.target;
+    const currentBtnId = currentBtn.id;
+    const currentSlide = document.getElementById(`${currentBtnId}ac`);
+    activeBtn.classList.remove("client__btn__mob--active");
+    activeSlide.style.display = "none";
+    currentBtn.classList.add("client__btn__mob--active");
+    currentSlide.style.display = "flex";
+    itemIndex = 1;
+    showSlideItems(itemIndex, currentSlide);
+  }
+  
+  return;
+}
+showSlideItems(itemIndex, mobFirstSlide);
+function showSlideItems(n, currentSlide) {
+  if (document.documentElement.clientWidth<543) {
+  const slides = currentSlide.getElementsByClassName("clients__item");
+  if (n > slides.length) {
+    itemIndex = 1;
+  }
+  if (n < 1) {
+    itemIndex = slides.length;
+  }
+  for (let i = 0; i < slides.length; i += 1) {
+    slides[i].style.display = "none";
+  }
+  slides[itemIndex - 1].style.display = "flex";}
+  return
+}
+const mobSliderCont = document.querySelector(".slider");
+mobSliderCont.addEventListener('click', sideItemUpdater)
+function sideItemUpdater(e) {
+  if (document.documentElement.clientWidth<543) {
+  const targetBtn = e.target;
+  if (targetBtn.nodeName !== 'BUTTON') {
+    return console.log('jjjjj')
+  }
+  const targetSlide = e.target.parentNode.parentNode.parentNode.parentNode;
+  
+  if (e.target.classList.contains('prev__client__btn')) {
+    
+    showSlideItems((itemIndex -= 1), targetSlide);
+    console.log(e.target, 'bbbbb', itemIndex );
+   
+  }
+  if (e.target.classList.contains('next__client__btn')) {
+    
+    showSlideItems((itemIndex += 1), targetSlide);
+    console.log(e.target, 'bbbbb', itemIndex );
+  }
+}
+return
+  
+  // showSlideItems(itemIndex);
+  // const activeBtn = document.querySelector(".client__btn__mob--active");
+  // const activeBtnId = activeBtn.attributes.id.textContent;
+  // const activeSlide = document.getElementById(`${activeBtnId}ac`);
+  // const prewBtn = activeSlide.querySelector(".prev__client__btn");
+  // const nextBtn = activeSlide.querySelector(".next__client__btn");
+}
+
+// prewBtn.addEventListener("click", minusItem);
+// nextBtn.addEventListener("click", plusItem);
+// itemIndex = 1;
+
+// function plusItem() {
+//   showSlidesItems((itemIndex += 1));
+  
+// }
+
+// /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+// function minusItem() {
+//   showSlidesItems((itemIndex -= 1));
+// }
+// // const sliderList =
+// const startSliderList =
 
 //Для ховера на банер
 window.addEventListener("scroll", function () {
