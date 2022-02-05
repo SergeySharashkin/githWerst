@@ -1,6 +1,8 @@
 .questions {
   @extend %auto-margin;
   padding-bottom: 90px;
+  background-color: #ffffff;
+  // margin-bottom: -250px;
 }
 .questions__container {
   @extend %auto-margin;

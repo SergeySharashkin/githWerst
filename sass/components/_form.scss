@@ -1,12 +1,15 @@
 .form-section {
   margin: 0 auto;
+  background-color: #ffffff;
   background-image: url("../images/form-bg.png");
   background-size: contain;
-  background-position: top;
-  min-height: 1363px;
-  margin-top: -244px;
+  background-position: center;
+  background-repeat: no-repeat;
+  // min-height: 1363px;
+  // margin-top: -244px;
   z-index: 0;
   position: relative;
+  // z-index: 1;
   
 }
 .form-container {

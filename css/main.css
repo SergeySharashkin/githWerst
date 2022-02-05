@@ -220,8 +220,9 @@ a {
 
 .page-header__container {
   margin: 0 auto;
+  max-width: 100vw;
   height: 707px;
-  background-image: url("../images/headbbgimg.png");
+  background-image: url("../images/header-bg.svg");
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -443,7 +444,8 @@ body {
 }
 
 .illustration {
-  margin-top: 350px;
+  margin-top: 0;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,6 +465,7 @@ body {
 
 .illustr {
   position: relative;
+  top: -300px;
   z-index: 2;
   max-width: 948px;
   width: 100%;
@@ -795,6 +798,7 @@ body {
   margin: 0 auto;
   padding-top: 200px;
   width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 750px) {
@@ -810,23 +814,20 @@ body {
 }
 
 .layer__bg-img {
-  position: relative;
-  margin-top: 280px;
+  background-color: #ffffff;
+  padding-bottom: 200px;
   background: url("../images/layer__bg-img.png");
   background-size: cover;
   background-position: top;
   width: 100vw;
-  height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 600px;
   margin: 0;
   padding: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .desc-bg {
-  margin: 0 auto;
+  margin: -1px auto 0 auto;
   width: 100%;
   background-color: #ffffff;
   z-index: 2;
@@ -1137,6 +1138,7 @@ body {
 
 .service {
   padding-top: 150px;
+  background-color: #ffffff;
 }
 
 .service__container {
@@ -1501,6 +1503,7 @@ body {
   background: radial-gradient(circle at top left, #4a42ec 0%, #521d91 100%);
   background-color: #521d91;
   background-size: cover;
+  z-index: 1;
   border-radius: 11px;
   -webkit-box-shadow: 0 48px 48px -32px #17109f, 0 96px 96px -64px #030214;
           box-shadow: 0 48px 48px -32px #17109f, 0 96px 96px -64px #030214;
@@ -1514,28 +1517,30 @@ body {
 
 .bg-poli {
   content: url("../images/Polygon.png");
-  width: 46vw;
-  height: 46vw;
+  width: 780px;
+  height: 780px;
   position: absolute;
   z-index: -1000 !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  left: -10vw;
-  top: -10vw;
+  left: -312px;
+  top: -270px;
+  -webkit-transform: rotate(8.39deg);
+          transform: rotate(8.39deg);
 }
 
 .bg-ball__ban {
   content: url("../images/bg-ball1.png");
-  width: 27vw;
-  height: 27vw;
+  width: 525px;
+  height: 520px;
   position: absolute;
   z-index: -1000 !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  right: -10vw;
-  bottom: -10vw;
+  right: -161px;
+  bottom: -234px;
 }
 
 @media screen and (max-width: 750px) {
@@ -1553,13 +1558,13 @@ body {
 }
 
 .banner__overlay {
-  position: fixed;
+  position: fixed !important;
   left: 0;
   top: 0;
   width: 200vw;
   height: 200vw;
   background-color: #5738c7c4;
-  z-index: -5;
+  z-index: 0;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1599,7 +1604,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 1.1;
   margin: 34px auto 35px auto;
   /* or 40px */
   max-width: 800px;
@@ -1628,6 +1633,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 226px;
+  padding: 0;
   height: 63px;
   font-style: normal;
   font-weight: 500;
@@ -1661,6 +1667,7 @@ body {
 
 .questions {
   padding-bottom: 90px;
+  background-color: #ffffff;
 }
 
 .questions__container {
@@ -2038,6 +2045,7 @@ body {
   z-index: 1;
   position: relative;
   padding: 0 15px;
+  background-color: #ffffff;
 }
 
 .clients__container {
@@ -2083,6 +2091,7 @@ body {
   border-radius: 11px;
   padding: 81px 89px 55px 85px;
   position: relative;
+  z-index: 10;
 }
 
 @media screen and (max-width: 750px) {
@@ -2534,11 +2543,11 @@ body {
 
 .form-section {
   margin: 0 auto;
+  background-color: #ffffff;
   background-image: url("../images/form-bg.png");
   background-size: contain;
-  background-position: top;
-  min-height: 1363px;
-  margin-top: -244px;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0;
   position: relative;
 }
@@ -2872,6 +2881,99 @@ body {
     width: 100px;
     height: 50px;
   }
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  -webkit-transform: scaleX(1.45);
+          transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  -webkit-transform: scaleY(1.3);
+          transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 .footer {

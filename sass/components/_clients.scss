@@ -3,10 +3,13 @@
   z-index: 1;
   position: relative;
 padding: 0 15px;
+background-color: #ffffff;
+// margin-bottom: -400px;
 }
 .clients__container {
   margin: 0 auto;
   max-width: 1500px;
+  
 }
 .clients__title {
   max-width: 1300px;
@@ -40,7 +43,9 @@ padding: 0 15px;
   border-radius: 11px;
   padding: 81px 89px 55px 85px;
   // overflow: hidden;
+  
   position: relative;
+  z-index: 10;
   @media screen and (max-width: 750px) {
     padding: 25px 30px;
     max-width: 750px;

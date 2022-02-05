@@ -5,11 +5,12 @@
     // transform: translateX(-50%);
     @extend %auto-margin;
     // top: 35vh;
-    margin-top: 350px;
-   
+    margin-top: 0;
+   background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    
     @media screen and (max-width: 750px) {
         margin-top: 150px;
     }
@@ -19,11 +20,13 @@
 }
 
 .illustr {
-        position: relative;
+    position: relative;
+    top: -300px;  
         z-index: 2;
         max-width: 948px;
         width: 100%;
-        @extend %auto-margin;    
+        @extend %auto-margin;  
+        
     }
  .pleyer_img {
     max-width: 948px;

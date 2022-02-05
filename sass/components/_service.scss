@@ -1,6 +1,8 @@
 .service {
   @extend %auto-margin;
   padding-top: 150px;
+  background-color: #ffffff;
+  // margin-bottom: -200px;
 }
 .service__container {
   @extend %auto-margin;
